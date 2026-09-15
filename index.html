@@ -3,157 +3,224 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SIMEDI KEPO</title>
+<title>SIMEDI KEPO - Satpol PP Kabupaten Lembata</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
 }
 
-body {
-    background: #eaf7ff;
-    color: #16445c;
+body{
+    background:#eef9ff;
+    color:#16445c;
 }
 
 /* HEADER */
-.header {
-    background: linear-gradient(135deg, #78c8ec, #b9e7fa);
-    text-align: center;
-    padding: 35px 20px;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
+.header{
+    background:linear-gradient(135deg,#55b9e8,#a9e2f8);
+    text-align:center;
+    padding:35px 20px 40px;
+    border-radius:0 0 35px 35px;
 }
 
-.header .logo {
-    font-size: 55px;
-    margin-bottom: 10px;
+.logo{
+    width:85px;
+    height:85px;
+    margin:auto;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:45px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
-.header h1 {
-    font-size: 32px;
-    color: white;
-    text-shadow: 1px 2px 3px #5598b7;
+.header h1{
+    margin-top:15px;
+    color:white;
+    font-size:34px;
+    letter-spacing:1px;
 }
 
-.header p {
-    color: white;
-    margin-top: 8px;
-    font-size: 15px;
+.header .subtitle{
+    margin-top:8px;
+    color:white;
+    font-size:15px;
+}
+
+.header .instansi{
+    margin-top:5px;
+    color:white;
+    font-size:14px;
 }
 
 /* CONTAINER */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 25px 18px;
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:30px 20px;
 }
 
-.welcome {
-    text-align: center;
-    margin-bottom: 25px;
+/* WELCOME */
+.welcome{
+    text-align:center;
+    margin-bottom:25px;
 }
 
-.welcome h2 {
-    color: #1976a5;
-    margin-bottom: 8px;
+.welcome h2{
+    color:#147ba7;
+    font-size:25px;
 }
 
-.welcome p {
-    font-size: 14px;
+.welcome p{
+    margin-top:8px;
+    color:#527384;
+}
+
+/* SEARCH */
+.search{
+    max-width:600px;
+    margin:20px auto 30px;
+}
+
+.search input{
+    width:100%;
+    padding:15px 20px;
+    border:2px solid #b9e5f5;
+    border-radius:30px;
+    outline:none;
+    font-size:15px;
 }
 
 /* MENU */
-.menu {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+.menu{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
 }
 
-.menu button {
-    border: none;
-    background: white;
-    border-radius: 18px;
-    padding: 20px 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-    transition: 0.3s;
-    color: #16445c;
+.card{
+    background:white;
+    border:none;
+    border-radius:20px;
+    padding:20px 10px;
+    min-height:145px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(40,120,150,.12);
+    transition:.3s;
+    color:#16445c;
 }
 
-.menu button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 22px rgba(40,120,150,.20);
 }
 
-.icon {
-    font-size: 38px;
-    display: block;
-    margin-bottom: 10px;
+.icon{
+    font-size:40px;
+    display:block;
+    margin-bottom:12px;
 }
 
-.menu-title {
-    font-weight: bold;
-    font-size: 14px;
+.card-title{
+    font-weight:bold;
+    font-size:14px;
+    line-height:1.3;
 }
 
-/* INFORMASI */
-.info-box {
-    display: none;
-    background: white;
-    margin-top: 25px;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+/* INFO */
+.info{
+    display:none;
+    margin-top:30px;
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
 }
 
-.info-box h2 {
-    color: #1976a5;
-    margin-bottom: 15px;
+.info h2{
+    color:#147ba7;
+    margin-bottom:18px;
 }
 
-.info-box h3 {
-    margin-top: 15px;
-    margin-bottom: 8px;
-    color: #28677f;
+.info h3{
+    color:#28677f;
+    margin:15px 0 8px;
 }
 
-.info-box ul {
-    padding-left: 20px;
-    line-height: 1.8;
+.info ul{
+    padding-left:22px;
+    line-height:1.8;
 }
 
-.close {
-    margin-top: 20px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 10px;
-    background: #64b5d9;
-    color: white;
-    cursor: pointer;
+.close{
+    margin-top:20px;
+    background:#55b9e8;
+    border:none;
+    color:white;
+    padding:11px 22px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+/* INFORMASI TERBARU */
+.news{
+    margin-top:35px;
+    background:white;
+    border-radius:22px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.news h2{
+    color:#147ba7;
+    margin-bottom:15px;
+}
+
+.news-item{
+    padding:13px;
+    margin-top:8px;
+    background:#eef9ff;
+    border-radius:12px;
 }
 
 /* FOOTER */
-.footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    background: #78c8ec;
-    color: white;
-    font-size: 13px;
+.footer{
+    margin-top:35px;
+    background:#55b9e8;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
 }
 
-/* HP */
-@media (max-width: 700px) {
-    .menu {
-        grid-template-columns: repeat(2, 1fr);
+/* RESPONSIVE */
+@media(max-width:850px){
+    .menu{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .menu{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
     }
 
-    .header h1 {
-        font-size: 25px;
+    .header h1{
+        font-size:27px;
+    }
+
+    .card{
+        min-height:130px;
+    }
+
+    .icon{
+        font-size:34px;
     }
 }
 </style>
@@ -162,112 +229,142 @@ body {
 <body>
 
 <!-- HEADER -->
-<div class="header">
+<header class="header">
+
     <div class="logo">🏛️</div>
 
     <h1>SIMEDI KEPO</h1>
 
-    <p>
+    <div class="subtitle">
         Sistem Informasi Media Digital Kepegawaian Online
-    </p>
+    </div>
 
-    <p>
+    <div class="instansi">
         Satuan Polisi Pamong Praja Kabupaten Lembata
-    </p>
-</div>
+    </div>
+
+</header>
 
 
-<div class="container">
+<main class="container">
 
-    <div class="welcome">
+    <!-- WELCOME -->
+    <section class="welcome">
         <h2>📋 Informasi Administrasi Kepegawaian</h2>
 
         <p>
-            Silakan pilih menu informasi yang diperlukan.
+            Pilih menu untuk melihat informasi persyaratan dan prosedur.
         </p>
+    </section>
+
+
+    <!-- SEARCH -->
+    <div class="search">
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Cari informasi kepegawaian..."
+            onkeyup="searchMenu()"
+        >
     </div>
 
 
     <!-- MENU -->
-    <div class="menu">
+    <section class="menu">
 
-        <button onclick="showInfo('cuti')">
+        <button class="card" onclick="showInfo('cuti')">
             <span class="icon">🏖️</span>
-            <span class="menu-title">Cuti</span>
+            <span class="card-title">Cuti</span>
         </button>
 
-        <button onclick="showInfo('pangkat')">
+        <button class="card" onclick="showInfo('pangkat')">
             <span class="icon">📈</span>
-            <span class="menu-title">Kenaikan Pangkat</span>
+            <span class="card-title">Kenaikan Pangkat</span>
         </button>
 
-        <button onclick="showInfo('kgb')">
+        <button class="card" onclick="showInfo('kgb')">
             <span class="icon">💰</span>
-            <span class="menu-title">Kenaikan Gaji Berkala</span>
+            <span class="card-title">Kenaikan Gaji Berkala</span>
         </button>
 
-        <button onclick="showInfo('skp')">
+        <button class="card" onclick="showInfo('skp')">
             <span class="icon">📝</span>
-            <span class="menu-title">SKP</span>
+            <span class="card-title">SKP</span>
         </button>
 
-        <button onclick="showInfo('mutasi')">
+        <button class="card" onclick="showInfo('mutasi')">
             <span class="icon">🔄</span>
-            <span class="menu-title">Mutasi</span>
+            <span class="card-title">Mutasi</span>
         </button>
 
-        <button onclick="showInfo('diklat')">
+        <button class="card" onclick="showInfo('diklat')">
             <span class="icon">🎓</span>
-            <span class="menu-title">Diklat</span>
+            <span class="card-title">Diklat</span>
         </button>
 
-        <button onclick="showInfo('tugas')">
+        <button class="card" onclick="showInfo('tugas')">
             <span class="icon">📚</span>
-            <span class="menu-title">Tugas Belajar</span>
+            <span class="card-title">Tugas Belajar</span>
         </button>
 
-        <button onclick="showInfo('izin')">
+        <button class="card" onclick="showInfo('izin')">
             <span class="icon">📖</span>
-            <span class="menu-title">Izin Belajar</span>
+            <span class="card-title">Izin Belajar</span>
         </button>
 
-        <button onclick="showInfo('jabatan')">
+        <button class="card" onclick="showInfo('jabatan')">
             <span class="icon">👤</span>
-            <span class="menu-title">Kenaikan Jabatan</span>
+            <span class="card-title">Kenaikan Jabatan</span>
         </button>
 
-        <button onclick="showInfo('pensiun')">
+        <button class="card" onclick="showInfo('pensiun')">
             <span class="icon">🏁</span>
-            <span class="menu-title">Pensiun</span>
+            <span class="card-title">Pensiun</span>
         </button>
 
-    </div>
+    </section>
 
 
     <!-- TEMPAT INFORMASI -->
-    <div id="info" class="info-box"></div>
-
-</div>
+    <section id="info" class="info"></section>
 
 
-<div class="footer">
+    <!-- INFORMASI TERBARU -->
+    <section class="news">
+
+        <h2>📢 Informasi Terbaru</h2>
+
+        <div class="news-item">
+            📌 Informasi administrasi kepegawaian dapat diperbarui sesuai ketentuan yang berlaku.
+        </div>
+
+        <div class="news-item">
+            📌 Silakan pilih menu di atas untuk memperoleh informasi.
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
     SIMEDI KEPO © 2026<br>
     Satuan Polisi Pamong Praja Kabupaten Lembata
-</div>
+
+</footer>
 
 
 <script>
 
-function showInfo(menu) {
+function showInfo(menu){
 
-    let title = "";
-    let content = "";
+    let title="";
+    let content="";
 
-    if (menu === "cuti") {
-
-        title = "🏖️ INFORMASI CUTI";
-
-        content = `
+    if(menu==="cuti"){
+        title="🏖️ INFORMASI CUTI";
+        content=`
         <h3>Persyaratan</h3>
         <ul>
             <li>Surat permohonan cuti</li>
@@ -277,183 +374,166 @@ function showInfo(menu) {
 
         <h3>Prosedur</h3>
         <ul>
-            <li>Mengajukan permohonan cuti</li>
+            <li>Mengajukan permohonan</li>
             <li>Verifikasi administrasi</li>
             <li>Persetujuan pejabat berwenang</li>
             <li>Penerbitan dokumen cuti</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "pangkat") {
-
-        title = "📈 INFORMASI KENAIKAN PANGKAT";
-
-        content = `
+    else if(menu==="pangkat"){
+        title="📈 INFORMASI KENAIKAN PANGKAT";
+        content=`
         <h3>Persyaratan</h3>
         <ul>
-            <li>Dokumen kepegawaian</li>
             <li>SK pangkat terakhir</li>
-            <li>Dokumen pendukung lainnya</li>
+            <li>Dokumen kepegawaian</li>
+            <li>Dokumen pendukung sesuai ketentuan</li>
         </ul>
 
         <h3>Prosedur</h3>
         <ul>
-            <li>Pemeriksaan kelengkapan berkas</li>
-            <li>Verifikasi data kepegawaian</li>
+            <li>Pemeriksaan berkas</li>
+            <li>Verifikasi data</li>
             <li>Pengusulan kenaikan pangkat</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "kgb") {
-
-        title = "💰 INFORMASI KENAIKAN GAJI BERKALA";
-
-        content = `
+    else if(menu==="kgb"){
+        title="💰 INFORMASI KENAIKAN GAJI BERKALA";
+        content=`
         <h3>Persyaratan</h3>
         <ul>
-            <li>SK kenaikan gaji berkala sebelumnya</li>
             <li>SK pangkat terakhir</li>
+            <li>SK KGB sebelumnya</li>
             <li>Dokumen kepegawaian lainnya</li>
         </ul>
 
         <h3>Prosedur</h3>
         <ul>
             <li>Verifikasi masa kerja</li>
-            <li>Pemeriksaan data pegawai</li>
+            <li>Pemeriksaan data</li>
             <li>Penerbitan KGB</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "skp") {
-
-        title = "📝 INFORMASI SKP";
-
-        content = `
+    else if(menu==="skp"){
+        title="📝 INFORMASI SKP";
+        content=`
         <h3>Informasi</h3>
         <ul>
             <li>Penyusunan SKP</li>
             <li>Perencanaan kinerja</li>
             <li>Pelaksanaan kinerja</li>
             <li>Evaluasi kinerja</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "mutasi") {
-
-        title = "🔄 INFORMASI MUTASI";
-
-        content = `
+    else if(menu==="mutasi"){
+        title="🔄 INFORMASI MUTASI";
+        content=`
         <h3>Informasi</h3>
         <ul>
             <li>Persyaratan mutasi</li>
             <li>Dokumen administrasi</li>
             <li>Prosedur pengajuan</li>
             <li>Verifikasi dan persetujuan</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "diklat") {
-
-        title = "🎓 INFORMASI DIKLAT";
-
-        content = `
+    else if(menu==="diklat"){
+        title="🎓 INFORMASI DIKLAT";
+        content=`
         <h3>Informasi</h3>
         <ul>
             <li>Jenis dan persyaratan diklat</li>
             <li>Pengusulan peserta</li>
             <li>Dokumen administrasi</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "tugas") {
-
-        title = "📚 INFORMASI TUGAS BELAJAR";
-
-        content = `
+    else if(menu==="tugas"){
+        title="📚 INFORMASI TUGAS BELAJAR";
+        content=`
         <h3>Informasi</h3>
         <ul>
             <li>Persyaratan tugas belajar</li>
             <li>Dokumen pendukung</li>
             <li>Prosedur pengajuan</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "izin") {
-
-        title = "📖 INFORMASI IZIN BELAJAR";
-
-        content = `
+    else if(menu==="izin"){
+        title="📖 INFORMASI IZIN BELAJAR";
+        content=`
         <h3>Informasi</h3>
         <ul>
             <li>Persyaratan izin belajar</li>
             <li>Dokumen pendukung</li>
             <li>Prosedur pengajuan</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "jabatan") {
-
-        title = "👤 INFORMASI KENAIKAN JABATAN";
-
-        content = `
+    else if(menu==="jabatan"){
+        title="👤 INFORMASI KENAIKAN JABATAN";
+        content=`
         <h3>Informasi</h3>
         <ul>
             <li>Persyaratan kenaikan jabatan</li>
             <li>Dokumen kepegawaian</li>
             <li>Prosedur pengajuan</li>
-        </ul>
-        `;
-
+        </ul>`;
     }
 
-    else if (menu === "pensiun") {
-
-        title = "🏁 INFORMASI PENSIUN";
-
-        content = `
+    else if(menu==="pensiun"){
+        title="🏁 INFORMASI PENSIUN";
+        content=`
         <h3>Informasi</h3>
         <ul>
             <li>Persyaratan administrasi pensiun</li>
             <li>Dokumen pendukung</li>
-            <li>Prosedur pengajuan pensiun</li>
-        </ul>
-        `;
-
+            <li>Prosedur pengajuan</li>
+        </ul>`;
     }
 
-
-    document.getElementById("info").innerHTML =
-        `<h2>${title}</h2>${content}
+    document.getElementById("info").innerHTML=
+        `<h2>${title}</h2>
+        ${content}
         <button class="close" onclick="closeInfo()">Tutup</button>`;
 
-    document.getElementById("info").style.display = "block";
+    document.getElementById("info").style.display="block";
 
     document.getElementById("info").scrollIntoView({
-        behavior: "smooth"
+        behavior:"smooth"
     });
 }
 
 
-function closeInfo() {
+function closeInfo(){
+    document.getElementById("info").style.display="none";
+}
 
-    document.getElementById("info").style.display = "none";
 
+function searchMenu(){
+
+    let input=document
+        .getElementById("search")
+        .value
+        .toLowerCase();
+
+    let cards=document.querySelectorAll(".card");
+
+    cards.forEach(function(card){
+
+        let text=card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            card.style.display="";
+        }else{
+            card.style.display="none";
+        }
+
+    });
 }
 
 </script>
